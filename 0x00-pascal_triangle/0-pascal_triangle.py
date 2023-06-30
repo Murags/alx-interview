@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""pascals triangle coefficients"""
+
 
 def pascal_triangle(n):
-
+    """Gets the coeffients and return list of list"""
     co_efficient_list = []
 
     if n <= 0:
@@ -20,6 +22,7 @@ def pascal_triangle(n):
 
 
 def factorial(n):
+    """Gets factorial of a number"""
     if n == 0:
         return 1
 
