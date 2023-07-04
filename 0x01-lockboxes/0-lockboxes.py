@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This is program determines if all boxes can be opened"""
 
+
 def canUnlockAll(boxes):
     """Checks if all boxes can be unlocked"""
     unlocked_boxes = [False] * len(boxes)
