@@ -21,10 +21,11 @@ def main():
             if strlen < 9:
                 continue
 
-            if strlen == 9:
-                code = line.split()[7]
+
+            code = line.split()[7]
+            if int(code) in sts_codes.keys():
                 sts_codes[int(code)] += 1
-                file_size += int(line.split()[8])
+            file_size += int(line.split()[8])
             if counter == 10:
                 counter = 0
 
