@@ -21,7 +21,6 @@ def main():
             if strlen < 9:
                 continue
 
-
             code = line.split()[7]
             if int(code) in sts_codes.keys():
                 sts_codes[int(code)] += 1
