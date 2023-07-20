@@ -2,6 +2,7 @@
 """_summary_
     """
 from sys import stdin
+import sys
 
 
 def main():
@@ -17,6 +18,9 @@ def main():
         for line in stdin:
             counter += 1
             strlen = len(line.split())
+            if strlen < 9:
+                continue
+
             if strlen == 9:
                 code = line.split()[7]
                 sts_codes[int(code)] += 1
@@ -28,6 +32,7 @@ def main():
                 for key, value in sts_codes.items():
                     if value:
                         print("{}: {}".format(key, value))
+                        sys.stdout.flush()
     except KeyboardInterrupt:
         counter = 0
 
@@ -35,6 +40,7 @@ def main():
         for key, value in sts_codes.items():
             if value:
                 print("{}: {}".format(key, value))
+        sys.stdout.flush()
 
 
 if __name__ == "__main__":
