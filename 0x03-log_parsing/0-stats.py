@@ -29,19 +29,19 @@ def main():
                 counter = 0
 
                 print("File size: {}".format(file_size))
-                for key, value in sts_codes.items():
+                for key, value in sorted(sts_codes.items()):
                     if value:
                         print("{}: {}".format(key, value))
     except KeyboardInterrupt:
         counter = 0
 
         print("File size: {}".format(file_size))
-        for key, value in sts_codes.items():
+        for key, value in sorted(sts_codes.items()):
             if value:
                 print("{}: {}".format(key, value))
 
     print("File size: {}".format(file_size))
-    for key, value in sts_codes.items():
+    for key, value in sorted(sts_codes.items()):
         if value:
             print("{}: {}".format(key, value))
 
