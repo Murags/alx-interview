@@ -42,6 +42,12 @@ def main():
                 print("{}: {}".format(key, value))
         sys.stdout.flush()
 
+    print("File size: {}".format(file_size))
+    for key, value in sts_codes.items():
+        if value:
+            print("{}: {}".format(key, value))
+        sys.stdout.flush()
+
 
 if __name__ == "__main__":
     main()
