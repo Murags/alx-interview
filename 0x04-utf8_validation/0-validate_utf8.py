@@ -1,7 +1,17 @@
 #!/usr/bin/python3
+"""_summary_
+    """
 
 
 def validUTF8(data):
+    """_summary_
+
+    Args:
+        data (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     remaining_bytes = 0
 
     for num in data:
