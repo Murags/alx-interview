@@ -43,7 +43,9 @@ def main():
     """_summary_
     """
     if len(argv) == 1:
-        return
+        print("Usage: nqueens N")
+        exit(1)
+
     n = argv[1]
     try:
         n = int(n)
