@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
-const { argv } = require('process');
+const process = require('process');
 const request = require('request');
 
-function fetchCharacterData(characterUrl) {
+function fetchCharacterData (characterUrl) {
   return new Promise((resolve, reject) => {
     request.get(characterUrl, (error, response, body) => {
       if (error) {
@@ -15,11 +15,11 @@ function fetchCharacterData(characterUrl) {
   });
 }
 
-async function main() {
+async function main () {
   const args = process.argv;
 
   if (args.length < 3) {
-    console.log("Usage: node script.js <movie_id>");
+    console.log('Usage: node script.js <movie_id>');
     return;
   }
 
@@ -32,7 +32,7 @@ async function main() {
 
     const movieData = JSON.parse(body);
     if (!movieData.characters || movieData.characters.length === 0) {
-      console.log("No character data available for this movie.");
+      console.log('No character data available for this movie.');
       return;
     }
 
