@@ -35,7 +35,7 @@ def check_up(grid, i, j):
         _type_: _description_
     """
     if i == 0:
-        return 0
+        return 1
 
     if grid[i - 1][j] == 0:
         return 1
@@ -55,7 +55,7 @@ def check_right(grid, i, j):
         _type_: _description_
     """
     if j == len(grid[i]) - 1:
-        return 0
+        return 1
 
     if grid[i][j + 1] == 0:
         return 1
@@ -75,7 +75,7 @@ def check_down(grid, i, j):
         _type_: _description_
     """
     if i == len(grid) - 1:
-        return 0
+        return 1
 
     if grid[i + 1][j] == 0:
         return 1
@@ -95,7 +95,7 @@ def check_left(grid, i, j):
         _type_: _description_
     """
     if j == 0:
-        return 0
+        return 1
 
     if grid[i][j - 1] == 0:
         return 1
